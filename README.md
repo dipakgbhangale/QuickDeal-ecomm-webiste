@@ -90,6 +90,8 @@ graph TD
 ```
 
 ### 2. Live Cart & Order Lifecycle
+
+
 ```mermaid
 graph TD
     A[Click Add to Shopping Bag] --> B[Push Item to localStorage quickdeal_cart]
@@ -99,11 +101,13 @@ graph TD
     E --> F[Adjust Quantity / Remove Items]
     F --> G[Click Place Order]
     G --> H{User logged in?}
-    H -- No -- > I[Show Sign In Toast & Redirect]
+    H -- No --> I[Show Sign In Toast & Redirect]
     H -- Yes --> J[Simulate Order ID & push to active_user orders array]
     J --> K[Clear quickdeal_cart in localStorage]
     K --> L[Redirect to my account.html Dashboard]
 ```
+
+
 
 ---
 
